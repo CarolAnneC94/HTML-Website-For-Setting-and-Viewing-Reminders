@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Add Reminder Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/scroll.js" type="text/javascript"></script>
+  <script src= "js/scroll.js"> </script>
+  <link href="css/styles.css" rel="stylesheet" type="text/css"> 
+  <link rel = "stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+  <script>
+	function startTime() {
+	  var today = new Date();
+	  var dd = today.getDate();
+	  var mm = today.getMonth()+1;
+	  var yyyy = today.getFullYear();
+	  
+	  if (dd < 10) {
+		dd = '0'+dd;
+	  }
+	  if (mm < 10) {
+		mm = '0'+mm;
+	  }
+	  
+	  today = yyyy+'-'+mm+'-'+dd;
+	  document.getElementById("date").setAttribute("min", today);
+	}
+  </script>
+</head>
+
+<div class="container"> 
+
+<!-- The scrollable area -->
+<!-- This is the navigation section of the Reminder App -->
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="startTime()">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+    <!-- navigation is displayed at the right hand side  -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">HOME</a></li>
+        <li class="active"><a href="Add.html">ADD REMINDER</a></li>
+        <li><a href="View.html">VIEW REMINDER</a></li>
+        <li><a href="Logout.html">LOGOUT</a></li>
+      </ul>
+	  
+	  <ul class="nav navbar-nav navbar-left">
+        <li><a href="index.html">Ulster Univesity Reminder App</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center"> 
+  <div class="unipic">
+  <img class="img-responsive"src="images\UlsterUni.jpg" alt="UlsterUni" height="50px">
+</div>
+</div>
+
+<div class="row text-center">
+<h2>Add Reminders</h2>
+</div>
+
+<!-- Main box for the page contents -->
+<div class="main-high">
+	<div class="home">
+		
+		<div class="main-high-gray">
+			<div>
+				<span class="subtitle-left"> <b>Create a Reminder</b> </span>
+				
+				<div class="input">
+					<span class="textSubject"> <b>Reminder Title</b> </span>
+					<input class="inputSubject" type="text" name="email">
+				</div>
+			
+				<div class="input">
+					<span class="textSubject"> <b>Description</b> </span>
+					<textarea class="inputLarge-gray" type="password" name="password" rows="5"> </textarea>
+				</div>
+				
+				<div class="subtitle-left-small-sameline">
+					<img class="img-icon"src="images\calendar.jpg" alt="Calendar" >
+					<input type="date" id="date">
+				</div>
+				<div class="subtitle-left-small-narrow">
+					<img class="img-icon"src="images\clock.jpg" alt="Calendar" >
+					<input type="time" id="appt" name="appt" required>
+				</div>
+			</div>
+		</div>
+		
+		<div class="button-center2">
+			<button class="buttonAdd-center" onclick="window.location.href='View.html';">
+				Add Reminder
+			</button>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+<div id="Add" class="container-fluid bg-grey">
+<footer> 2019 - Reminder App - Carol-Anne Campbell </footer>
+</div>
+
+</body>
+
+</html>
